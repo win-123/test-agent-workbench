@@ -1,0 +1,109 @@
+{
+  "asset_id": "api-imported-har",
+  "runs": [
+    {
+      "task_id": "task_20261028010722_1ae873",
+      "run_id": "run_20261028010722_571ec5",
+      "status": "passed",
+      "report_path": "output/run_20261028010722_571ec5.json",
+      "metrics": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      }
+    },
+    {
+      "task_id": "task_20261028010722_b494cc",
+      "run_id": "run_20261028010722_6bfbc0",
+      "status": "passed",
+      "report_path": "output/run_20261028010722_6bfbc0.json",
+      "metrics": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      }
+    }
+  ],
+  "history_runs": 2,
+  "comparison": {
+    "asset_id": "api-imported-har",
+    "left": {
+      "run_id": "run_20261028010722_571ec5",
+      "task_id": "task_20261028010722_1ae873",
+      "asset_id": "api-imported-har",
+      "asset_version": 1,
+      "status": "passed",
+      "started_at": "2026-10-28T01:07:22.463Z",
+      "finished_at": "2026-10-28T01:07:22.473Z",
+      "report_path": "output/run_20261028010722_571ec5.json",
+      "log_paths": [
+        ".test-agent/desktop-tasks/task_20261028010722_1ae873/task.log"
+      ],
+      "metrics": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "duration_ms": 9
+      },
+      "recorded_at": "2026-10-28T01:07:22.474Z"
+    },
+    "right": {
+      "run_id": "run_20261028010722_6bfbc0",
+      "task_id": "task_20261028010722_b494cc",
+      "asset_id": "api-imported-har",
+      "asset_version": 1,
+      "status": "passed",
+      "started_at": "2026-10-28T01:07:22.475Z",
+      "finished_at": "2026-10-28T01:07:22.478Z",
+      "report_path": "output/run_20261028010722_6bfbc0.json",
+      "log_paths": [
+        ".test-agent/desktop-tasks/task_20261028010722_b494cc/task.log"
+      ],
+      "metrics": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "duration_ms": 2
+      },
+      "recorded_at": "2026-10-28T01:07:22.479Z"
+    },
+    "metrics": [
+      {
+        "name": "duration_ms",
+        "left": 9,
+        "right": 2,
+        "delta": -7,
+        "delta_percent": -77.77777777777779
+      },
+      {
+        "name": "failed",
+        "left": 0,
+        "right": 0,
+        "delta": 0,
+        "delta_percent": null
+      },
+      {
+        "name": "passed",
+        "left": 2,
+        "right": 2,
+        "delta": 0,
+        "delta_percent": 0
+      },
+      {
+        "name": "total",
+        "left": 2,
+        "right": 2,
+        "delta": 0,
+        "delta_percent": 0
+      }
+    ],
+    "facts": [
+      "Compared real run run_20261028010722_571ec5 (passed) with run_20261028010722_6bfbc0 (passed).",
+      "duration_ms: 9 -> 2 (delta -7).",
+      "failed: 0 -> 0 (delta 0).",
+      "passed: 2 -> 2 (delta 0).",
+      "total: 2 -> 2 (delta 0)."
+    ],
+    "caveats": []
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "schema_version": "test-agent.phase7-evidence/v1",
+  "generated_at": "2026-10-28T03:13:26.500Z",
+  "project": "/Users/ztl/Downloads/AIProject/test-agent/evidence/phase7/e2e/phase-7-e2e",
+  "facts": [
+    "Imported 2 real HAR requests.",
+    "Java analysis source_20261028031325_7add7e found 2 endpoint declarations and 5 static branches.",
+    "API asset runs run_20261028031325_327893 and run_20261028031325_e236c8 both ended passed.",
+    "Candidate candidate-source_20261028031325_7add7e-c5cbb4f632 executed run_20261028031325_27e3c1 with status passed.",
+    "UI run ui_20261028031325_6f0a67 ended passed with 2/2 steps passed.",
+    "k6 run engine_20261028031326_a38b31 ended passed.",
+    "Agent task agent_phase7_e2e executed tools har.inspect, api.replay, engine.run.k6.",
+    "Coverage measurement is measured=false, percentage=null."
+  ],
+  "inferences": [
+    "The imported GET/POST HAR requests statically match the analyzed Spring order controller declarations by method and normalized path.",
+    "The API, UI and performance evidence are associated through this project, task records, asset history and report paths."
+  ],
+  "hypotheses": [
+    {
+      "statement": "The identified Java branches may remain uncovered in the implementation runtime.",
+      "verification": "Attach a runtime coverage export before assigning covered/uncovered status or a coverage percentage."
+    }
+  ],
+  "code_analysis": {
+    "id": "source_20261028031325_7add7e",
+    "path": "/Users/ztl/Downloads/AIProject/test-agent/evidence/phase7/e2e/phase-7-e2e/.test-agent/code-analysis/source_20261028031325_7add7e.json"
+  },
+  "coverage_analysis": {
+    "id": "coverage_20261028031325_74cafd",
+    "path": "/Users/ztl/Downloads/AIProject/test-agent/evidence/phase7/e2e/phase-7-e2e/.test-agent/coverage/coverage_20261028031325_74cafd.json",
+    "measurement": {
+      "measured": false,
+      "matched_branches": 0,
+      "covered_branches": 0,
+      "percentage": null,
+      "note": "No runtime coverage report was supplied. Static branch evidence is not a coverage percentage."
+    }
+  },
+  "candidate_execution": {
+    "task_id": "task_20261028031325_baf8c1",
+    "run_id": "run_20261028031325_27e3c1",
+    "status": "passed",
+    "report_path": "output/run_20261028031325_27e3c1.json",
+    "completed_at": "2026-10-28T03:13:25.765Z"
+  },
+  "runs": [
+    {
+      "task_id": "task_20261028031325_826527",
+      "run_id": "run_20261028031325_327893",
+      "status": "passed",
+      "report_path": "output/run_20261028031325_327893.json"
+    },
+    {
+      "task_id": "task_20261028031325_602873",
+      "run_id": "run_20261028031325_e236c8",
+      "status": "passed",
+      "report_path": "output/run_20261028031325_e236c8.json"
+    },
+    {
+      "task_id": "task_20261028031325_68ddfa",
+      "run_id": "ui_20261028031325_6f0a67",
+      "status": "passed",
+      "report_path": "output/ui_20261028031325_6f0a67.report.json"
+    },
+    {
+      "task_id": "task_20261028031326_d1ef48",
+      "run_id": "engine_20261028031326_a38b31",
+      "status": "passed",
+      "report_path": "output/engine_20261028031326_a38b31.report.json"
+    }
+  ],
+  "agent_task": {
+    "task_id": "agent_phase7_e2e",
+    "status": "succeeded",
+    "run_ids": [
+      "run_20261028031326_c59776",
+      "engine_20261028031326_agent_phase7_engine-k6"
+    ],
+    "tool_calls": [
+      {
+        "tool": "har.inspect",
+        "status": "succeeded",
+        "artifacts": []
+      },
+      {
+        "tool": "api.replay",
+        "status": "succeeded",
+        "artifacts": [
+          "/Users/ztl/Downloads/AIProject/test-agent/evidence/phase7/e2e/phase-7-e2e/.test-agent/tasks/agent_phase7_e2e/artifacts/run_20261028031326_c59776.report.json"
+        ]
+      },
+      {
+        "tool": "engine.run.k6",
+        "status": "succeeded",
+        "artifacts": [
+          "/Users/ztl/Downloads/AIProject/test-agent/evidence/phase7/e2e/phase-7-e2e/.test-agent/tasks/agent_phase7_e2e/artifacts/engine_20261028031326_agent_phase7_engine-k6.js",
+          "/Users/ztl/Downloads/AIProject/test-agent/evidence/phase7/e2e/phase-7-e2e/.test-agent/tasks/agent_phase7_e2e/artifacts/engine_20261028031326_agent_phase7_engine-k6.report.json",
+          "/Users/ztl/Downloads/AIProject/test-agent/evidence/phase7/e2e/phase-7-e2e/.test-agent/tasks/agent_phase7_e2e/artifacts/engine_20261028031326_agent_phase7_engine-k6.k6.stdout.log",
+          "/Users/ztl/Downloads/AIProject/test-agent/evidence/phase7/e2e/phase-7-e2e/.test-agent/tasks/agent_phase7_e2e/artifacts/engine_20261028031326_agent_phase7_engine-k6.k6.stderr.log",
+          "/Users/ztl/Downloads/AIProject/test-agent/evidence/phase7/e2e/phase-7-e2e/.test-agent/tasks/agent_phase7_e2e/artifacts/engine_20261028031326_agent_phase7_engine-k6.k6.json"
+        ]
+      }
+    ]
+  },
+  "comparison": {
+    "asset_id": "api-imported-har",
+    "left": {
+      "run_id": "run_20261028031325_327893",
+      "task_id": "task_20261028031325_826527",
+      "asset_id": "api-imported-har",
+      "asset_version": 1,
+      "status": "passed",
+      "started_at": "2026-10-28T03:13:25.734Z",
+      "finished_at": "2026-10-28T03:13:25.743Z",
+      "report_path": "output/run_20261028031325_327893.json",
+      "log_paths": [
+        ".test-agent/desktop-tasks/task_20261028031325_826527/task.log"
+      ],
+      "metrics": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "duration_ms": 7
+      },
+      "recorded_at": "2026-10-28T03:13:25.746Z"
+    },
+    "right": {
+      "run_id": "run_20261028031325_e236c8",
+      "task_id": "task_20261028031325_602873",
+      "asset_id": "api-imported-har",
+      "asset_version": 1,
+      "status": "passed",
+      "started_at": "2026-10-28T03:13:25.747Z",
+      "finished_at": "2026-10-28T03:13:25.749Z",
+      "report_path": "output/run_20261028031325_e236c8.json",
+      "log_paths": [
+        ".test-agent/desktop-tasks/task_20261028031325_602873/task.log"
+      ],
+      "metrics": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "duration_ms": 2
+      },
+      "recorded_at": "2026-10-28T03:13:25.750Z"
+    },
+    "metrics": [
+      {
+        "name": "duration_ms",
+        "left": 7,
+        "right": 2,
+        "delta": -5,
+        "delta_percent": -71.42857142857143
+      },
+      {
+        "name": "failed",
+        "left": 0,
+        "right": 0,
+        "delta": 0,
+        "delta_percent": null
+      },
+      {
+        "name": "passed",
+        "left": 2,
+        "right": 2,
+        "delta": 0,
+        "delta_percent": 0
+      },
+      {
+        "name": "total",
+        "left": 2,
+        "right": 2,
+        "delta": 0,
+        "delta_percent": 0
+      }
+    ],
+    "facts": [
+      "Compared real run run_20261028031325_327893 (passed) with run_20261028031325_e236c8 (passed).",
+      "duration_ms: 7 -> 2 (delta -5).",
+      "failed: 0 -> 0 (delta 0).",
+      "passed: 2 -> 2 (delta 0).",
+      "total: 2 -> 2 (delta 0)."
+    ],
+    "caveats": []
+  },
+  "limitations": [
+    "No runtime coverage input was supplied; static branch evidence is not coverage.",
+    "The Java fixture is self-built, not a real business system.",
+    "Model planning is not part of this deterministic evidence chain."
+  ]
+}

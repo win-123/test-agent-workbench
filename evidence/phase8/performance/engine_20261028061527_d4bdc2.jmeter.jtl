@@ -1,0 +1,4 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1793168128308,9,GET /api/health,Non HTTP response code: java.net.SocketException,Non HTTP response message: Operation not permitted (connect failed),HAR Users 1-1,text,false,,2359,0,1,1,http://127.0.0.1:8089/api/health?verbose=true,0,0,9
+1793168128318,1,POST /api/echo,Non HTTP response code: java.net.SocketException,Non HTTP response message: Operation not permitted (connect failed),HAR Users 1-1,text,false,,2359,0,1,1,http://127.0.0.1:8089/api/echo,0,0,1
+1793168128319,0,GET /api/fail,Non HTTP response code: java.net.SocketException,Non HTTP response message: Operation not permitted (connect failed),HAR Users 1-1,text,false,,2359,0,1,1,http://127.0.0.1:8089/api/fail,0,0,0

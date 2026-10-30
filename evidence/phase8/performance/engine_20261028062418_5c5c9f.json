@@ -1,0 +1,44 @@
+{
+  "engine": {
+    "name": "jmeter",
+    "version": "5.6.3",
+    "version_available": true
+  },
+  "run_id": "engine_20261028062418_5c5c9f",
+  "started_at": "2026-10-28T06:24:18.825Z",
+  "finished_at": "2026-10-28T06:24:20.817Z",
+  "configuration": {
+    "concurrency": 1,
+    "duration": "",
+    "iterations": 1
+  },
+  "metrics": {
+    "total": 3,
+    "passed": 2,
+    "failed": 1,
+    "error_rate": 0.3333333333333333,
+    "avg_response_ms": 5.666666666666667,
+    "p90_response_ms": 15,
+    "p95_response_ms": 15,
+    "p99_response_ms": 15,
+    "throughput_per_second": 176.47058823529412,
+    "throughput_basis": "JTL timeStamp range"
+  },
+  "evidence": {
+    "stdout_path": "/Users/ztl/Downloads/AIProject/test-agent/output/engine_20261028062418_5c5c9f.jmeter.stdout.log",
+    "stderr_path": "/Users/ztl/Downloads/AIProject/test-agent/output/engine_20261028062418_5c5c9f.jmeter.stderr.log",
+    "raw_result_path": "/Users/ztl/Downloads/AIProject/test-agent/output/engine_20261028062418_5c5c9f.jmeter.jtl",
+    "exit_code": 0,
+    "signal": null,
+    "timed_out": false,
+    "status": "passed"
+  },
+  "sensitive_redacted": true,
+  "diagnostics": [
+    {
+      "category": "test_result",
+      "message": "engine reported 1 failed request out of 3"
+    }
+  ],
+  "limitations": []
+}

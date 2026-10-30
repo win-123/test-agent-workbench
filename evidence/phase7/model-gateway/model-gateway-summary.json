@@ -1,0 +1,49 @@
+{
+  "schema_version": "test-agent.phase7-model-gateway/v1",
+  "generated_at": "2026-10-28T03:18:39.403Z",
+  "gateway_kind": "local OpenAI-compatible HTTP fixture",
+  "model_config": {
+    "encryptionAvailable": true,
+    "provider": "openai-compatible",
+    "baseUrl": "http://127.0.0.1:57675/",
+    "model": "phase7-model",
+    "chatPath": "/chat/completions",
+    "timeoutMs": 5000,
+    "maxTokens": 1024,
+    "hasApiKey": true,
+    "lastConnection": {
+      "status": "available",
+      "checked_at": "2026-10-28T03:18:39.398Z"
+    }
+  },
+  "connection": {
+    "status": "available",
+    "checkedAt": "2026-10-28T03:18:39.403Z"
+  },
+  "model_plan": {
+    "status": "available",
+    "source": "model",
+    "goal": "Local gateway model plan",
+    "plan_hash": "89cc308f61c59e75e76f0f8a5823660c39f3fdbfd1b45fb5da2d320aefa94787",
+    "validation": {
+      "valid": true,
+      "issues": []
+    },
+    "unconfirmed_execution_rejected": true
+  },
+  "invalid_output_fallback": {
+    "status": "unavailable",
+    "source": "deterministic",
+    "error": "model did not return valid JSON: Expected property name or '}' in JSON at position 1 (line 1 column 2)"
+  },
+  "deterministic_fallback": {
+    "status": "unavailable",
+    "source": "deterministic"
+  },
+  "security": {
+    "plaintext_api_key_in_config_file": false,
+    "plaintext_api_key_in_summary": false,
+    "model_output_schema_validated": true,
+    "execution_requires_confirmation": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "project": "/Users/ztl/Downloads/AIProject/test-agent/evidence/phase6/coverage-evidence-2",
+  "coverage_analysis_path": "/Users/ztl/Downloads/AIProject/test-agent/evidence/phase6/coverage-evidence-2/.test-agent/coverage/coverage_20261028010518_aa7275.json",
+  "analysis_id": "coverage_20261028010518_aa7275",
+  "measurement": {
+    "measured": false,
+    "matched_branches": 0,
+    "covered_branches": 0,
+    "percentage": null,
+    "note": "No runtime coverage report was supplied. Static branch evidence is not a coverage percentage."
+  },
+  "candidate_id": "candidate-source_20261028010348_ce610c-c5cbb4f632",
+  "candidate_execution": {
+    "task_id": "task_20261028010518_90e062",
+    "run_id": "run_20261028010518_32bf64",
+    "status": "passed",
+    "report_path": "output/run_20261028010518_32bf64.json",
+    "completed_at": "2026-10-28T01:05:18.031Z"
+  },
+  "candidate_coverage_assertion": "not_measured",
+  "limitations": [
+    "Static endpoint mapping does not prove runtime reachability.",
+    "Executing a candidate does not imply its target branch was covered unless runtime coverage separately proves it.",
+    "No runtime coverage input was supplied; no coverage percentage is calculated."
+  ]
+}

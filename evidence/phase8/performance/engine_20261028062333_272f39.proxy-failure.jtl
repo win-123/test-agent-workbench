@@ -1,0 +1,4 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1793168614971,302,GET /api/health,502,Bad Gateway,HAR Users 1-1,,false,,47,219,1,1,http://127.0.0.1:8089/api/health?verbose=true,297,0,9
+1793168615277,4,POST /api/echo,Non HTTP response code: java.net.SocketException,Non HTTP response message: Broken pipe (Write failed),HAR Users 1-1,text,false,,2481,0,1,1,http://127.0.0.1:8089/api/echo,0,0,0
+1793168615282,220,GET /api/fail,502,Bad Gateway,HAR Users 1-1,,false,,47,178,1,1,http://127.0.0.1:8089/api/fail,220,0,0

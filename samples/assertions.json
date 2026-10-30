@@ -1,0 +1,13 @@
+[
+  {
+    "index": 0,
+    "status": 200,
+    "jsonPath": "$.status",
+    "equals": "ok",
+    "maxDurationMs": 2000
+  },
+  {
+    "index": 1,
+    "status": 200
+  }
+]

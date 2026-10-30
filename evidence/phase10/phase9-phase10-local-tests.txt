@@ -1,0 +1,11 @@
+
+ RUN  v3.2.4 /Users/ztl/Downloads/AIProject/test-agent
+
+ ✓ tests/integration/phase10-local-readiness.spec.ts (1 test) 17ms
+ ✓ tests/integration/phase9-api-correlation.spec.ts (3 tests) 20ms
+
+ Test Files  2 passed (2)
+      Tests  4 passed (4)
+   Start at  09:55:29
+   Duration  405ms (transform 95ms, setup 0ms, collect 269ms, tests 38ms, environment 0ms, prepare 74ms)
+

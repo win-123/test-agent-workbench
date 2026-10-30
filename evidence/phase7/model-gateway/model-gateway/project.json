@@ -1,0 +1,36 @@
+{
+  "schema_version": "test-agent.desktop-project/v1",
+  "project_id": "6153ca79-fd11-45dc-b3a8-70be8a77e4d4",
+  "name": "Model gateway",
+  "created_at": "2026-10-28T03:18:39.388Z",
+  "updated_at": "2026-10-28T03:18:39.391Z",
+  "target": {
+    "baseUrl": "http://127.0.0.1:1",
+    "allowedOrigins": [
+      "http://127.0.0.1:1"
+    ],
+    "allowedPaths": []
+  },
+  "environment": {
+    "headers": {}
+  },
+  "api": {
+    "timeoutMs": 1000,
+    "concurrency": 1,
+    "assertions": []
+  },
+  "performance": {
+    "engine": "k6",
+    "vus": 1,
+    "duration": "",
+    "iterations": 1,
+    "timeoutMs": 5000,
+    "enginePaths": {}
+  },
+  "correlations": [],
+  "authorization": {
+    "confirmed": true,
+    "scope": "local model fixture only"
+  },
+  "har_file": "har/20261028031839-demo.har"
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "test-agent.phase10-local-readiness/v1",
+  "generated_at": "2026-10-29T01:55:30.232Z",
+  "environment_kind": "local loopback fixture",
+  "status": "passed",
+  "runs": {
+    "correlation": "run_20261029015530_07be6b",
+    "auth_failure": "run_20261029015530_5d9d1c",
+    "server_failure": "run_20261029015530_29fae0",
+    "invalid_response": "run_20261029015530_1014e0",
+    "blocked_path": "run_20261029015530_92d5eb",
+    "allowed_path": "run_20261029015530_8e0cd0"
+  },
+  "checks": {
+    "credential_header_injected": true,
+    "path_body_and_header_correlations_injected": true,
+    "dynamic_values_absent_from_report": true,
+    "credential_value_absent_from_report": true,
+    "assertion_values_absent_from_report": true,
+    "auth_failure_classified": true,
+    "server_failure_classified": true,
+    "invalid_response_assertion_classified": true,
+    "path_prefix_boundary_enforced": true
+  }
+}

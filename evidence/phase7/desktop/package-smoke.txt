@@ -1,0 +1,18 @@
+Date: 2026-10-28 11:27 Asia/Shanghai
+Package: release/Test Agent Workbench-0.1.0-arm64-mac.zip
+ZIP SHA256: 22ecbf8daccceb52d7988a496d52b19ade4337eb24fd36934cfda089333b9a95
+app.asar SHA256: aa5ff90b54a63459e4fe9f0b261a98e9bce5b4202fa79748c1847b790f268df5
+
+Command: release/mac-arm64/Test Agent Workbench.app/Contents/MacOS/Test Agent Workbench --smoke-test
+Exit code: 0
+Output:
+TEST_AGENT_DESKTOP_SMOKE=ready
+TEST_AGENT_SECURE_STORAGE=available
+
+Command: release/mac-arm64/Test Agent Workbench.app/Contents/MacOS/Test Agent Workbench --smoke-ui
+Exit code: 0
+Output:
+TEST_AGENT_DESKTOP_UI_SMOKE=ready
+{"ok":true,"task_id":"task_20261028032750_fe93e5","run_id":"ui_20261028032750_2bd5ba","status":"passed","steps_passed":2,"steps_total":2}
+
+Smoke commands were run serially because Electron enforces a single application instance. An earlier parallel attempt hit the singleton lock and was not counted.

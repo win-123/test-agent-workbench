@@ -1,0 +1,97 @@
+{
+  "run_id": "ui_20261028005559_a967c0",
+  "case_id": "ui-order-failure-diagnostic",
+  "case_version": 1,
+  "name": "Intentional failing diagnostic for screenshot evidence",
+  "status": "failed",
+  "target_url": "http://127.0.0.1:8090/",
+  "browser": "156.0.8078.48",
+  "started_at": "2026-10-28T00:55:59.816Z",
+  "finished_at": "2026-10-28T00:56:03.544Z",
+  "duration_ms": 3728,
+  "steps_total": 8,
+  "steps_passed": 7,
+  "steps_failed": 1,
+  "steps": [
+    {
+      "id": "open",
+      "action": "navigate",
+      "status": "passed",
+      "started_at": "2026-10-28T00:56:00.138Z",
+      "finished_at": "2026-10-28T00:56:00.154Z",
+      "duration_ms": 16,
+      "actual": "200 http://127.0.0.1:8090/"
+    },
+    {
+      "id": "username",
+      "action": "fill",
+      "status": "passed",
+      "started_at": "2026-10-28T00:56:00.154Z",
+      "finished_at": "2026-10-28T00:56:00.188Z",
+      "duration_ms": 34,
+      "actual": "[input value redacted]"
+    },
+    {
+      "id": "password",
+      "action": "fill",
+      "status": "passed",
+      "started_at": "2026-10-28T00:56:00.188Z",
+      "finished_at": "2026-10-28T00:56:00.209Z",
+      "duration_ms": 21,
+      "actual": "[input value redacted]"
+    },
+    {
+      "id": "login",
+      "action": "click",
+      "status": "passed",
+      "started_at": "2026-10-28T00:56:00.209Z",
+      "finished_at": "2026-10-28T00:56:00.248Z",
+      "duration_ms": 39,
+      "actual": "0 matching element(s)"
+    },
+    {
+      "id": "customer",
+      "action": "fill",
+      "status": "passed",
+      "started_at": "2026-10-28T00:56:00.248Z",
+      "finished_at": "2026-10-28T00:56:00.249Z",
+      "duration_ms": 1,
+      "actual": "[input value redacted]"
+    },
+    {
+      "id": "simulate-failure",
+      "action": "click",
+      "status": "passed",
+      "started_at": "2026-10-28T00:56:00.249Z",
+      "finished_at": "2026-10-28T00:56:00.279Z",
+      "duration_ms": 30,
+      "actual": "1 matching element(s)"
+    },
+    {
+      "id": "submit",
+      "action": "click",
+      "status": "passed",
+      "started_at": "2026-10-28T00:56:00.279Z",
+      "finished_at": "2026-10-28T00:56:00.312Z",
+      "duration_ms": 33,
+      "actual": "1 matching element(s)"
+    },
+    {
+      "id": "wrong-expectation",
+      "action": "assert",
+      "status": "failed",
+      "started_at": "2026-10-28T00:56:00.312Z",
+      "finished_at": "2026-10-28T00:56:03.476Z",
+      "duration_ms": 3164,
+      "expected": "Order created",
+      "error": "text assertion failed: expected to contain \"Order created\", got \"Order rejected: downstream inventory service is unavailable.\"",
+      "screenshot_path": "/Users/ztl/Downloads/AIProject/test-agent/evidence/phase6/ui/ui/ui_20261028005559_a967c0/failure-wrong-expectation.png"
+    }
+  ],
+  "console": [],
+  "page_errors": [],
+  "screenshots": [
+    "/Users/ztl/Downloads/AIProject/test-agent/evidence/phase6/ui/ui/ui_20261028005559_a967c0/failure-wrong-expectation.png"
+  ],
+  "sensitive_redacted": true
+}

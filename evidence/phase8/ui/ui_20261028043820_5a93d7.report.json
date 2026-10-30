@@ -1,0 +1,124 @@
+{
+  "run_id": "ui_20261028043820_5a93d7",
+  "case_id": "ui-login-search-submit",
+  "case_version": 1,
+  "name": "Login, search orders and submit form",
+  "status": "passed",
+  "target_url": "http://127.0.0.1:8090/",
+  "browser": "156.0.8078.48",
+  "started_at": "2026-10-28T04:38:20.277Z",
+  "finished_at": "2026-10-28T04:38:21.018Z",
+  "duration_ms": 741,
+  "steps_total": 11,
+  "steps_passed": 11,
+  "steps_failed": 0,
+  "steps": [
+    {
+      "id": "open",
+      "action": "navigate",
+      "status": "passed",
+      "started_at": "2026-10-28T04:38:20.753Z",
+      "finished_at": "2026-10-28T04:38:20.784Z",
+      "duration_ms": 31,
+      "description": "Open the local order workspace fixture.",
+      "actual": "200 http://127.0.0.1:8090/"
+    },
+    {
+      "id": "username",
+      "action": "fill",
+      "status": "passed",
+      "started_at": "2026-10-28T04:38:20.784Z",
+      "finished_at": "2026-10-28T04:38:20.841Z",
+      "duration_ms": 57,
+      "actual": "[input value redacted]"
+    },
+    {
+      "id": "password",
+      "action": "fill",
+      "status": "passed",
+      "started_at": "2026-10-28T04:38:20.841Z",
+      "finished_at": "2026-10-28T04:38:20.867Z",
+      "duration_ms": 26,
+      "actual": "[input value redacted]"
+    },
+    {
+      "id": "login",
+      "action": "click",
+      "status": "passed",
+      "started_at": "2026-10-28T04:38:20.867Z",
+      "finished_at": "2026-10-28T04:38:20.901Z",
+      "duration_ms": 34,
+      "actual": "0 matching element(s)"
+    },
+    {
+      "id": "workspace-visible",
+      "action": "assert",
+      "status": "passed",
+      "started_at": "2026-10-28T04:38:20.901Z",
+      "finished_at": "2026-10-28T04:38:20.902Z",
+      "duration_ms": 1,
+      "expected": "",
+      "actual": "visible"
+    },
+    {
+      "id": "search",
+      "action": "fill",
+      "status": "passed",
+      "started_at": "2026-10-28T04:38:20.902Z",
+      "finished_at": "2026-10-28T04:38:20.904Z",
+      "duration_ms": 2,
+      "actual": "[input value redacted]"
+    },
+    {
+      "id": "search-result",
+      "action": "assert",
+      "status": "passed",
+      "started_at": "2026-10-28T04:38:20.904Z",
+      "finished_at": "2026-10-28T04:38:20.908Z",
+      "duration_ms": 4,
+      "expected": "ORD-1003",
+      "actual": "OrderCustomerAmountStatusORD-1003Bluebird Labs$2,100Paid"
+    },
+    {
+      "id": "customer",
+      "action": "fill",
+      "status": "passed",
+      "started_at": "2026-10-28T04:38:20.908Z",
+      "finished_at": "2026-10-28T04:38:20.910Z",
+      "duration_ms": 2,
+      "actual": "[input value redacted]"
+    },
+    {
+      "id": "priority",
+      "action": "select",
+      "status": "passed",
+      "started_at": "2026-10-28T04:38:20.910Z",
+      "finished_at": "2026-10-28T04:38:20.912Z",
+      "duration_ms": 2,
+      "actual": "high"
+    },
+    {
+      "id": "submit",
+      "action": "click",
+      "status": "passed",
+      "started_at": "2026-10-28T04:38:20.912Z",
+      "finished_at": "2026-10-28T04:38:20.944Z",
+      "duration_ms": 33,
+      "actual": "1 matching element(s)"
+    },
+    {
+      "id": "order-created",
+      "action": "assert",
+      "status": "passed",
+      "started_at": "2026-10-28T04:38:20.944Z",
+      "finished_at": "2026-10-28T04:38:20.945Z",
+      "duration_ms": 1,
+      "expected": "Order created for Acme QA with high priority.",
+      "actual": "Order created for Acme QA with high priority."
+    }
+  ],
+  "console": [],
+  "page_errors": [],
+  "screenshots": [],
+  "sensitive_redacted": true
+}

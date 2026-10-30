@@ -1,0 +1,32 @@
+{
+  "name": "test-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json",
+    "cli": "node --experimental-strip-types src/cli/bin.ts",
+    "desktop:build": "node scripts/build-desktop.mjs",
+    "desktop:run": "node scripts/run-desktop.mjs",
+    "desktop:package": "node scripts/package-desktop.mjs",
+    "desktop:smoke": "node scripts/run-desktop.mjs --smoke-test",
+    "desktop:smoke-ui": "node scripts/run-desktop.mjs --smoke-ui",
+    "desktop:package:win": "node scripts/package-windows-portable.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "electron": "44.7.0",
+    "electron-builder": "26.17.0",
+    "esbuild": "0.28.2",
+    "jszip": "3.10.1",
+    "playwright": "1.61.1",
+    "tsx": "4.20.3",
+    "typescript": "5.9.3",
+    "vitest": "3.2.4"
+  }
+}

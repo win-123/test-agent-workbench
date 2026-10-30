@@ -1,0 +1,12 @@
+{
+  "schema_version": "test-agent.phase8-model-status/v1",
+  "generated_at": "2026-10-28T06:18:00.000Z",
+  "model_status": "unavailable",
+  "external_commercial_gateway": "not configured / not verified",
+  "deterministic_plan": {
+    "path": "evidence/phase8/model/plan.json",
+    "valid": true,
+    "plan_hash": "b162a2e27dbe0751018605b8854044d59c16aa9d1f42ce0a32ab0ce39cb0ff95"
+  },
+  "result": "CLI generated and validated a deterministic plan without loading a model."
+}

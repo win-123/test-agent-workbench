@@ -1,0 +1,80 @@
+{
+  "schema_version": "test-agent.ui-case/v1",
+  "case_id": "ui-login-search-submit",
+  "name": "Login, search orders and submit form",
+  "version": 1,
+  "target_url": "http://127.0.0.1:8090/",
+  "allowed_origins": ["http://127.0.0.1:8090"],
+  "timeout_ms": 10000,
+  "headless": true,
+  "steps": [
+    {
+      "id": "open",
+      "action": "navigate",
+      "url": "http://127.0.0.1:8090/",
+      "description": "Open the local order workspace fixture."
+    },
+    {
+      "id": "username",
+      "action": "fill",
+      "locator": { "kind": "label", "value": "Username" },
+      "value": "demo"
+    },
+    {
+      "id": "password",
+      "action": "fill",
+      "locator": { "kind": "label", "value": "Password" },
+      "value": "demo123"
+    },
+    {
+      "id": "login",
+      "action": "click",
+      "locator": { "kind": "role", "role": "button", "name": "Open workspace", "value": "Open workspace" }
+    },
+    {
+      "id": "workspace-visible",
+      "action": "assert",
+      "assertion": "visible",
+      "locator": { "kind": "text", "value": "Order workspace" }
+    },
+    {
+      "id": "search",
+      "action": "fill",
+      "locator": { "kind": "label", "value": "Search orders" },
+      "value": "Bluebird"
+    },
+    {
+      "id": "search-result",
+      "action": "assert",
+      "assertion": "containsText",
+      "locator": { "kind": "testId", "value": "search-results" },
+      "expected": "ORD-1003"
+    },
+    {
+      "id": "customer",
+      "action": "fill",
+      "locator": { "kind": "label", "value": "Customer" },
+      "value": "Acme QA"
+    },
+    {
+      "id": "priority",
+      "action": "select",
+      "locator": { "kind": "label", "value": "Priority" },
+      "value": "high"
+    },
+    {
+      "id": "submit",
+      "action": "click",
+      "locator": { "kind": "role", "role": "button", "name": "Create order", "value": "Create order" }
+    },
+    {
+      "id": "order-created",
+      "action": "assert",
+      "assertion": "containsText",
+      "locator": { "kind": "testId", "value": "order-result" },
+      "expected": "Order created for Acme QA with high priority."
+    }
+  ],
+  "created_at": "2026-10-28T00:00:00.000Z",
+  "updated_at": "2026-10-28T00:00:00.000Z"
+}

@@ -1,0 +1,19 @@
+$ node scripts/run-desktop.mjs --smoke-ui
+
+  dist/desktop/preload.cjs      4.8kb
+  dist/desktop/preload.cjs.map  6.5kb
+
+⚡ Done in 2ms
+
+  dist/desktop/renderer/app.js      117.7kb
+  dist/desktop/renderer/app.js.map  171.2kb
+
+⚡ Done in 7ms
+
+  dist/desktop/main.cjs      664.2kb
+  dist/desktop/main.cjs.map    1.3mb
+
+⚡ Done in 16ms
+desktop build complete: /Users/ztl/Downloads/AIProject/test-agent/dist/desktop
+TEST_AGENT_DESKTOP_UI_SMOKE=ready
+{"ok":true,"task_id":"task_20261030045831_1b5d4d","run_id":"ui_20261030045831_4230bf","status":"passed","steps_passed":2,"steps_total":2}

@@ -1,0 +1,55 @@
+$ vitest run
+
+ RUN  v3.2.4 /Users/ztl/Downloads/AIProject/test-agent
+
+ ✓ tests/integration/cli-exit-status.spec.ts (1 test) 327ms
+   ✓ CLI exit status > returns non-zero when replay reports a failed request  327ms
+ ✓ tests/integration/coverage-execution.spec.ts (1 test) 115ms
+ ✓ tests/desktop/asset-service.spec.ts (3 tests) 198ms
+ ✓ tests/integration/cli.spec.ts (2 tests) 574ms
+ ✓ tests/integration/agent-cli.spec.ts (1 test) 575ms
+   ✓ agent CLI without AI > creates, validates, and persists a deterministic structured plan  574ms
+ ✓ tests/unit/java-analyzer.spec.ts (3 tests) 545ms
+   ✓ WAR bytecode analysis > inventories a WAR and rebuilds class/method/call metadata without claiming endpoints  533ms
+ ✓ tests/desktop/task-service.spec.ts (5 tests) 566ms
+ ✓ tests/integration/agent-orchestrator.spec.ts (5 tests) 381ms
+ ✓ tests/integration/agent-code-analysis.spec.ts (2 tests) 114ms
+ ✓ tests/unit/coverage-service.spec.ts (3 tests) 332ms
+ ✓ tests/desktop/credential-service.spec.ts (4 tests) 90ms
+ ✓ tests/integration/phase8-mvp-api.spec.ts (1 test) 190ms
+ ✓ tests/integration/task-lifecycle.spec.ts (1 test) 235ms
+ ✓ tests/integration/phase9-api-correlation.spec.ts (3 tests) 109ms
+ ✓ tests/desktop/agent-model.spec.ts (2 tests) 38ms
+ ✓ tests/desktop/ui-case-service.spec.ts (3 tests) 33ms
+ ✓ tests/desktop/project-service.spec.ts (4 tests) 28ms
+ ✓ tests/integration/phase10-local-readiness.spec.ts (1 test) 36ms
+ ✓ tests/unit/replay-core.spec.ts (4 tests) 28ms
+ ✓ tests/desktop/temp-cleanup.spec.ts (3 tests) 65ms
+ ✓ tests/integration/phase7-model-gateway.spec.ts (1 test) 111ms
+ ✓ tests/security/security.spec.ts (2 tests) 9ms
+ ✓ tests/unit/engine-report.spec.ts (5 tests) 7ms
+ ✓ tests/desktop/model-service.spec.ts (3 tests) 9ms
+ ✓ tests/unit/agent-plan.spec.ts (9 tests) 7ms
+ ✓ tests/unit/target-policy.spec.ts (3 tests) 6ms
+ ✓ tests/desktop/security.spec.ts (2 tests) 5ms
+ ✓ tests/unit/parser.spec.ts (7 tests) 2ms
+ ✓ tests/unit/report-redaction.spec.ts (1 test) 3ms
+ ✓ tests/unit/assertions.spec.ts (2 tests) 2ms
+ ✓ tests/integration/generators.spec.ts (3 tests) 1ms
+ ✓ tests/unit/ui-validation.spec.ts (4 tests) 3ms
+ ✓ tests/integration/postman.spec.ts (1 test) 2ms
+ ✓ tests/integration/phase7-end-to-end.spec.ts (1 test) 2385ms
+   ✓ phase 7 end-to-end evidence chain > links import, Java analysis, candidate planning, confirmation, real execution, assets and history  2383ms
+ ✓ tests/integration/replay.spec.ts (4 tests) 3125ms
+ ✓ tests/integration/ui-runner.spec.ts (3 tests) 8748ms
+   ✓ real Playwright UI execution > logs in, searches and submits a form  2299ms
+   ✓ real Playwright UI execution > captures a failure screenshot and real error evidence  6009ms
+   ✓ real Playwright UI execution > marks a real browser run as cancelled when aborted  437ms
+ ✓ tests/integration/engines.spec.ts (4 tests) 10270ms
+   ✓ engine executor > reports timeout with exit signal while preserving output paths  10067ms
+
+ Test Files  37 passed (37)
+      Tests  107 passed (107)
+   Start at  12:38:53
+   Duration  10.63s (transform 897ms, setup 0ms, collect 6.28s, tests 29.28s, environment 3ms, prepare 2.16s)
+

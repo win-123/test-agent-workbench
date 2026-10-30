@@ -1,0 +1,12 @@
+node_modules/
+output/
+.test-agent/
+*.log
+.DS_Store
+.env
+deepseek-harness/
+dist/
+release/
+.desktop-runtime/
+.desktop-packaging/
+ui-test-artifacts/

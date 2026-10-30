@@ -1,0 +1,14 @@
+{
+  "project": "/Users/ztl/Downloads/AIProject/test-agent/evidence/phase6/ui-desktop-evidence",
+  "task_id": "task_20261028024103_c0d52a",
+  "status": "passed",
+  "run_id": "ui_20261028024103_ee9cdb",
+  "report_path": "output/ui_20261028024103_ee9cdb.report.json",
+  "result_summary": {
+    "status": "passed",
+    "total": 11,
+    "passed": 11,
+    "failed": 0,
+    "screenshots": 0
+  }
+}

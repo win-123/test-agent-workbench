@@ -1,0 +1,64 @@
+{
+  "schema_version": "test-agent.phase8-performance-trial/v1",
+  "generated_at": "2026-10-28T06:24:20.000Z",
+  "environment_kind": "local authorized fixture on 127.0.0.1:8089",
+  "real_business_performance": false,
+  "k6": {
+    "run_id": "engine_20261028062256_197ed2",
+    "version": "k6 v1.8.2",
+    "engine_exit_code": 0,
+    "cli_exit_code": 1,
+    "cli_exit_reason": "One fixture request intentionally returned HTTP 500.",
+    "requests_total": 3,
+    "requests_passed": 2,
+    "requests_failed": 1,
+    "script": "evidence/phase8/performance/engine_20261028062256_197ed2.js",
+    "report": "evidence/phase8/performance/engine_20261028062256_197ed2.json",
+    "raw_result": "evidence/phase8/performance/engine_20261028062256_197ed2.k6.json"
+  },
+  "jmeter": {
+    "run_id": "engine_20261028062418_5c5c9f",
+    "version": "5.6.3",
+    "engine_exit_code": 0,
+    "cli_exit_code": 1,
+    "cli_exit_reason": "One fixture request intentionally returned HTTP 500.",
+    "requests_total": 3,
+    "requests_passed": 2,
+    "requests_failed": 1,
+    "script": "evidence/phase8/performance/engine_20261028062418_5c5c9f.jmx",
+    "report": "evidence/phase8/performance/engine_20261028062418_5c5c9f.json",
+    "raw_result": "evidence/phase8/performance/engine_20261028062418_5c5c9f.jmeter.jtl",
+    "jvm_args": "-Dhttp.proxyHost= -Dhttps.proxyHost= -Dhttp.nonProxyHosts=localhost|127.0.0.1"
+  },
+  "verified": {
+    "script_generation": true,
+    "real_k6_process": true,
+    "real_jmeter_process": true,
+    "successful_requests": true,
+    "server_failure_collection": true,
+    "raw_result_collection": true,
+    "throughput_and_percentiles": true,
+    "nonzero_cli_exit_on_test_failure": true
+  },
+  "not_verified": {
+    "production_or_business_load": "No authorized target or load window was supplied."
+  },
+  "failed_attempts": [
+    {
+      "base_url": "http://127.0.0.1:9",
+      "result": "Rejected before engine execution because the target origin was not whitelisted."
+    },
+    {
+      "run_id": "engine_20261028061517_cce73d",
+      "result": "Real k6 process ran against a non-listening port and collected 3 network failures; used to verify failure handling, not target availability."
+    },
+    {
+      "run_id": "engine_20261028061527_d4bdc2",
+      "result": "Real JMeter process ran against a non-listening port and collected 3 network failures; used to verify failure handling, not target availability."
+    },
+    {
+      "run_id": "engine_20261028062333_272f39",
+      "result": "Environment proxy converted local JMeter requests to HTTP 502; rerun with local non-proxy JVM arguments succeeded. Raw JTL retained as engine_20261028062333_272f39.proxy-failure.jtl."
+    }
+  ]
+}

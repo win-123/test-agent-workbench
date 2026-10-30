@@ -1,0 +1,16 @@
+Date: 2026-10-29 08:02 Asia/Shanghai
+Package: release/Test Agent Workbench-0.1.0-arm64-mac.zip
+ZIP SHA256: 12bee8be6a83d9748b287ae30ef71e6a11dea858a1fee0d0f833507c0a1415aa
+app.asar SHA256: 1bc53c2a43bc667aeb51bac2875341c78b634d996670b19fe24be1e8140ef389
+
+Command: release/mac-arm64/Test Agent Workbench.app/Contents/MacOS/Test Agent Workbench --smoke-test
+Exit code: 0
+Output:
+TEST_AGENT_DESKTOP_SMOKE=ready
+TEST_AGENT_SECURE_STORAGE=available
+
+Command: release/mac-arm64/Test Agent Workbench.app/Contents/MacOS/Test Agent Workbench --smoke-ui
+Exit code: 0
+Output:
+TEST_AGENT_DESKTOP_UI_SMOKE=ready
+{"ok":true,"task_id":"task_20261029000440_f30371","run_id":"ui_20261029000440_1b70f6","status":"passed","steps_passed":2,"steps_total":2}

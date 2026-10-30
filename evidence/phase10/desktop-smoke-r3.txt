@@ -1,0 +1,19 @@
+$ node scripts/run-desktop.mjs --smoke-test
+
+  dist/desktop/preload.cjs      4.8kb
+  dist/desktop/preload.cjs.map  6.5kb
+
+⚡ Done in 4ms
+
+  dist/desktop/renderer/app.js      117.7kb
+  dist/desktop/renderer/app.js.map  171.2kb
+
+⚡ Done in 7ms
+
+  dist/desktop/main.cjs      664.2kb
+  dist/desktop/main.cjs.map    1.3mb
+
+⚡ Done in 17ms
+desktop build complete: /Users/ztl/Downloads/AIProject/test-agent/dist/desktop
+TEST_AGENT_DESKTOP_SMOKE=ready
+TEST_AGENT_SECURE_STORAGE=available

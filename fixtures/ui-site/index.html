@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Northstar Orders</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="kicker">Northstar / local fixture</p>
+        <h1>Order operations, without the noise.</h1>
+        <p>Deterministic local UI for login, search, form submission and error-state validation.</p>
+      </section>
+
+      <section id="login-panel" class="panel" aria-label="Sign in">
+        <h2>Sign in</h2>
+        <form id="login-form">
+          <label for="username">Username</label>
+          <input id="username" name="username" autocomplete="off" value="">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="off">
+          <button type="submit">Open workspace</button>
+        </form>
+        <p id="login-error" class="error" role="alert" hidden>Invalid username or password.</p>
+      </section>
+
+      <section id="workspace" class="panel" hidden>
+        <div class="panel-head">
+          <div>
+            <p class="kicker">Signed in as demo</p>
+            <h2>Order workspace</h2>
+          </div>
+          <button id="logout" class="ghost">Sign out</button>
+        </div>
+        <label for="query">Search orders</label>
+        <input id="query" placeholder="Type a customer or order ID">
+        <div id="search-results" data-testid="search-results"></div>
+
+        <hr>
+        <form id="order-form">
+          <label for="customer">Customer</label>
+          <input id="customer" name="customer">
+          <label for="priority">Priority</label>
+          <select id="priority" name="priority">
+            <option value="standard">Standard</option>
+            <option value="high">High</option>
+          </select>
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes"></textarea>
+          <label class="check"><input id="fail-mode" type="checkbox"> Simulate downstream failure</label>
+          <button type="submit">Create order</button>
+        </form>
+        <p id="order-result" data-testid="order-result" hidden></p>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+{
+  "schema_version": "test-agent.desktop-project/v1",
+  "project_id": "f4eec490-f874-402c-9119-00b71d13a85b",
+  "name": "Phase 9 correlation",
+  "created_at": "2026-10-29T00:01:26.454Z",
+  "updated_at": "2026-10-29T00:01:26.456Z",
+  "target": {
+    "baseUrl": "http://127.0.0.1:55921",
+    "allowedOrigins": [
+      "http://127.0.0.1:55921"
+    ],
+    "allowedPaths": []
+  },
+  "environment": {
+    "headers": {}
+  },
+  "api": {
+    "timeoutMs": 3000,
+    "concurrency": 10,
+    "assertions": [
+      {
+        "index": 2,
+        "status": 200
+      }
+    ]
+  },
+  "performance": {
+    "engine": "k6",
+    "vus": 1,
+    "duration": "",
+    "iterations": 1,
+    "timeoutMs": 5000,
+    "enginePaths": {}
+  },
+  "correlations": [
+    {
+      "sourceIndex": 0,
+      "jsonPath": "$.accessToken",
+      "variableName": "accessToken",
+      "targetIndexes": [],
+      "targetHeaders": [
+        {
+          "index": 1,
+          "name": "Authorization",
+          "value": "Bearer ${accessToken}"
+        }
+      ]
+    },
+    {
+      "sourceIndex": 1,
+      "jsonPath": "$.id",
+      "variableName": "orderId",
+      "targetIndexes": [
+        2
+      ]
+    }
+  ],
+  "authorization": {
+    "confirmed": true,
+    "scope": "local phase 9 fixture only"
+  },
+  "credentialRef": "safe://phase9_tenant"
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": "test-agent.phase8-whitebox-spot-check/v1",
+  "generated_at": "2026-10-28T06:17:00.000Z",
+  "input_kind": "self-built Java fixtures",
+  "real_business_project": false,
+  "source_facts": [
+    {
+      "claim": "GET /api/orders/{id} maps to OrderController.findOrder",
+      "source_evidence": "fixtures/java-project/src/main/java/com/example/orders/OrderController.java:20-25",
+      "analysis_evidence": "evidence/phase8/code/java-source-analysis.json endpoints[0]"
+    },
+    {
+      "claim": "POST /api/orders maps to OrderController.createOrder with @RequestBody",
+      "source_evidence": "fixtures/java-project/src/main/java/com/example/orders/OrderController.java:28-34",
+      "analysis_evidence": "evidence/phase8/code/java-source-analysis.json endpoints[1]"
+    },
+    {
+      "claim": "findOrder passes id to OrderService.find",
+      "source_evidence": "fixtures/java-project/src/main/java/com/example/orders/OrderController.java:25",
+      "analysis_evidence": "calls[target=service.find].arguments=['id'], parameter_evidence='source-text'"
+    },
+    {
+      "claim": "createOrder passes request to OrderService.submit on both branches",
+      "source_evidence": "fixtures/java-project/src/main/java/com/example/orders/OrderController.java:31-34",
+      "analysis_evidence": "calls[target=service.submit] at lines 32 and 34, arguments=['request']"
+    },
+    {
+      "claim": "Important branches and exceptions have file and line evidence",
+      "source_evidence": "OrderController.java:22,31,35; OrderService.java:5-6,12-13",
+      "analysis_evidence": "5 branch records and 3 exception records"
+    },
+    {
+      "claim": "Reflection prevents a complete static call graph",
+      "source_evidence": "fixtures/java-project/src/main/java/com/example/orders/LegacyRouter.java:5-6",
+      "analysis_evidence": "uncertainties kind='reflection'"
+    }
+  ],
+  "war_facts": [
+    {
+      "claim": "WAR contains one application class, one config file and one nested JAR",
+      "analysis_evidence": "archive.entries=3, class_files=1, config_files=['WEB-INF/web.xml'], jars=1"
+    },
+    {
+      "claim": "DemoService.choose has a bytecode if branch",
+      "analysis_evidence": "branches[0].method='choose', kind='if', line=5"
+    },
+    {
+      "claim": "DemoService.choose calls DemoService.helper with a String parameter type",
+      "analysis_evidence": "calls[target='com.example.war.DemoService.helper'].parameter_types=['java.lang.String'], parameter_evidence='bytecode-descriptor'"
+    }
+  ],
+  "confirmed": {
+    "endpoint_mapping": true,
+    "method_call_evidence": true,
+    "source_parameter_expressions": true,
+    "bytecode_parameter_types": true,
+    "branch_line_evidence": true,
+    "exception_line_evidence": true,
+    "dynamic_behavior_limitations": true
+  },
+  "gaps_and_limitations": [
+    "OrderRequest is a Java record and the lightweight parser reports 'No method signatures were parsed'; this is an omission, not evidence that the record is unused.",
+    "Static exception message extraction is imprecise for string literals; file/line/type remain useful but message text should not be treated as complete.",
+    "Branch IDs are unique per parsed class rather than globally unique across the analysis.",
+    "WAR nested JAR is inventoried but not introspected, so dependency-internal calls remain unresolved.",
+    "No runtime coverage input was supplied; coverage percentage remains null and no coverage improvement is claimed.",
+    "This spot check uses self-built fixtures and does not validate real business source or a real WAR."
+  ],
+  "coverage": {
+    "measured": false,
+    "percentage": null,
+    "reason": "No runtime coverage report was supplied."
+  }
+}

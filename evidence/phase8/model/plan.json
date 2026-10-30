@@ -1,0 +1,83 @@
+{
+  "schema_version": "test-agent.plan/v1",
+  "task_id": "phase8_no_model",
+  "goal": "Phase 8 model unavailable deterministic check",
+  "target": {
+    "base_url": "http://127.0.0.1:8089",
+    "allowed_origins": [
+      "http://127.0.0.1:8089"
+    ]
+  },
+  "authorization": {
+    "confirmed": true,
+    "scope": "Only the explicitly supplied local test target is authorized."
+  },
+  "test_data": [
+    {
+      "name": "primary-har",
+      "kind": "har",
+      "location": "/Users/ztl/Downloads/AIProject/test-agent/samples/demo.har",
+      "description": "Sanitized HAR supplied by the user."
+    }
+  ],
+  "request_dependencies": [],
+  "steps": [
+    {
+      "id": "inspect-har",
+      "title": "Inspect and sanitize the HAR",
+      "tool": "har.inspect",
+      "arguments": {
+        "path": "/Users/ztl/Downloads/AIProject/test-agent/samples/demo.har"
+      },
+      "test_data_refs": [
+        "primary-har"
+      ],
+      "assertions": [],
+      "depends_on": [],
+      "risk": {
+        "level": "low",
+        "side_effects": false,
+        "requires_confirmation": false,
+        "reasons": [
+          "Reads a local HAR file only."
+        ]
+      },
+      "acceptance_criteria": [
+        "HAR parses successfully and reports the expected request count."
+      ]
+    },
+    {
+      "id": "api-replay",
+      "title": "Replay requests against the authorized target",
+      "tool": "api.replay",
+      "arguments": {
+        "path": "/Users/ztl/Downloads/AIProject/test-agent/samples/demo.har",
+        "timeout_ms": 5000,
+        "concurrency": 1
+      },
+      "test_data_refs": [
+        "primary-har"
+      ],
+      "assertions": [
+        {
+          "status": 200,
+          "description": "Expected successful response status."
+        }
+      ],
+      "depends_on": [
+        "inspect-har"
+      ],
+      "risk": {
+        "level": "medium",
+        "side_effects": true,
+        "requires_confirmation": true,
+        "reasons": [
+          "POST/PUT/PATCH/DELETE requests can change target data."
+        ]
+      },
+      "acceptance_criteria": [
+        "Every recorded response matches its configured assertion or failure is captured in the report."
+      ]
+    }
+  ]
+}

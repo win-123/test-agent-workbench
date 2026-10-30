@@ -1,0 +1,4 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1793168659400,15,GET /api/health,200,OK,HAR Users 1-1,text,true,,173,168,1,1,http://127.0.0.1:8089/api/health?verbose=true,13,0,10
+1793168659415,1,POST /api/echo,200,OK,HAR Users 1-1,text,true,,191,179,1,1,http://127.0.0.1:8089/api/echo,1,0,0
+1793168659417,1,GET /api/fail,500,Internal Server Error,HAR Users 1-1,text,false,,188,127,1,1,http://127.0.0.1:8089/api/fail,1,0,0

@@ -1,0 +1,48 @@
+{
+  "schema_version": "test-agent.phase8-ui-trial/v1",
+  "generated_at": "2026-10-28T06:38:40.000Z",
+  "environment_kind": "local fixture",
+  "real_business_ui": false,
+  "runs": [
+    {
+      "case": "samples/ui-cases/login-search-submit.json",
+      "run_id": "ui_20261028043820_5a93d7",
+      "status": "passed",
+      "steps_passed": 11,
+      "steps_total": 11,
+      "coverage": ["page load", "login state transition", "dynamic search", "form input", "select", "submit", "assertion"]
+    },
+    {
+      "case": "samples/ui-cases/order-downstream-failure.json",
+      "run_id": "ui_20261028043827_8ea5b7",
+      "status": "passed",
+      "steps_passed": 8,
+      "steps_total": 8,
+      "coverage": ["login", "failure toggle", "submit", "error message assertion"]
+    },
+    {
+      "case": "samples/ui-cases/order-failure-diagnostic.json",
+      "run_id": "ui_20261028043836_b4e242",
+      "status": "failed",
+      "steps_passed": 7,
+      "steps_total": 8,
+      "screenshot": "evidence/phase8/ui/ui/ui_20261028043836_b4e242/failure-wrong-expectation.png",
+      "purpose": "verify genuine failure evidence and screenshot"
+    }
+  ],
+  "verified": {
+    "chrome_execution": true,
+    "login_and_workspace_transition": true,
+    "dynamic_search": true,
+    "form_submission": true,
+    "error_path": true,
+    "failure_screenshot": true,
+    "report_persistence": true
+  },
+  "not_verified_in_phase8": {
+    "real_business_ui": "No authorized business URL or account was supplied.",
+    "new_browser_page_navigation": "Fixture uses an in-page login/workspace state transition, not a separate URL route.",
+    "native_popup": "No native browser dialog is part of the fixture."
+  },
+  "process_cleanup": "Phase7/phase8 integration suite covers cancellation; runner closes the browser in finally and captures cancellation as a terminal report state."
+}

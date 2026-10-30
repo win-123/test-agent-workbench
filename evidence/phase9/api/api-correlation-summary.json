@@ -1,0 +1,37 @@
+{
+  "schema_version": "test-agent.phase9-correlation/v1",
+  "generated_at": "2026-10-29T00:01:26.470Z",
+  "environment_kind": "local fixture",
+  "project": "/Users/ztl/Downloads/AIProject/test-agent/evidence/phase9/api/phase-9-correlation",
+  "task_id": "task_20261029000126_806b54",
+  "run_id": "run_20261029000126_0ba981",
+  "status": "passed",
+  "report_path": "output/run_20261029000126_0ba981.json",
+  "request_summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0
+  },
+  "correlation_results": [
+    {
+      "variable_name": "accessToken",
+      "source_index": 0,
+      "target_indexes": [],
+      "status": "extracted"
+    },
+    {
+      "variable_name": "orderId",
+      "source_index": 1,
+      "target_indexes": [
+        2
+      ],
+      "status": "extracted"
+    }
+  ],
+  "security": {
+    "credential_secret_in_report": false,
+    "runtime_token_in_report": false,
+    "credential_secret_in_log": false,
+    "runtime_token_in_log": false
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "test-agent.desktop-project/v1",
+  "project_id": "c0a5a2a9-71c1-4ff8-ad35-563485473e9a",
+  "name": "Phase 8 MVP API",
+  "created_at": "2026-10-28T06:25:15.934Z",
+  "updated_at": "2026-10-28T06:25:15.937Z",
+  "target": {
+    "baseUrl": "http://127.0.0.1:63428",
+    "allowedOrigins": [
+      "http://127.0.0.1:63428"
+    ],
+    "allowedPaths": []
+  },
+  "environment": {
+    "headers": {
+      "X-Test-Environment": "phase8-local"
+    }
+  },
+  "api": {
+    "timeoutMs": 3000,
+    "concurrency": 1,
+    "assertions": [
+      {
+        "index": 0,
+        "status": 200,
+        "jsonPath": "$.status",
+        "equals": "ok"
+      },
+      {
+        "index": 1,
+        "status": 200,
+        "contains": "ok"
+      },
+      {
+        "index": 2,
+        "status": 200
+      }
+    ]
+  },
+  "performance": {
+    "engine": "k6",
+    "vus": 1,
+    "duration": "",
+    "iterations": 1,
+    "timeoutMs": 10000,
+    "enginePaths": {}
+  },
+  "correlations": [],
+  "authorization": {
+    "confirmed": true,
+    "scope": "Phase 8 local MVP fixture only; no production target"
+  },
+  "har_file": "har/20261028062515-source.har"
+}

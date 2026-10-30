@@ -1,0 +1,305 @@
+{
+  "schema_version": "test-agent.java-analysis/v1",
+  "analysis_id": "war_20261028031815_e56836",
+  "mode": "war",
+  "input": "demo.war",
+  "generated_at": "2026-10-28T03:18:15.656Z",
+  "structure": {
+    "root": "demo.war",
+    "source_roots": [],
+    "source_files": 0,
+    "packages": [
+      "com.example.war"
+    ],
+    "build_files": [],
+    "frameworks": []
+  },
+  "classes": [
+    {
+      "name": "com.example.war.DemoService",
+      "package": "com.example.war",
+      "kind": "class",
+      "file": "WEB-INF/classes/com/example/war/DemoService.class",
+      "annotations": [],
+      "super_class": "java.lang.Object",
+      "interfaces": [],
+      "methods": [
+        {
+          "class_name": "com.example.war.DemoService",
+          "name": "<init>",
+          "signature": "<init>()V",
+          "descriptor": "()V",
+          "parameters": [],
+          "annotations": [],
+          "calls": [
+            {
+              "caller_class": "com.example.war.DemoService",
+              "caller_method": "<init>",
+              "target": "java.lang.Object.<init>",
+              "line": 3,
+              "resolved": false,
+              "dynamic": false,
+              "parameter_types": [],
+              "parameter_evidence": "bytecode-descriptor",
+              "evidence": {
+                "file": "WEB-INF/classes/com/example/war/DemoService.class",
+                "line": 3,
+                "class_name": "com.example.war.DemoService",
+                "method": "<init>"
+              }
+            }
+          ],
+          "branches": [],
+          "exceptions": [],
+          "confidence": "bytecode",
+          "line": 3,
+          "end_line": 3,
+          "file": "WEB-INF/classes/com/example/war/DemoService.class"
+        },
+        {
+          "class_name": "com.example.war.DemoService",
+          "name": "choose",
+          "signature": "choose(ZLjava/lang/String;)Ljava/lang/String;",
+          "descriptor": "(ZLjava/lang/String;)Ljava/lang/String;",
+          "parameters": [
+            {
+              "name": "arg0",
+              "type": "boolean",
+              "annotations": []
+            },
+            {
+              "name": "arg1",
+              "type": "java.lang.String",
+              "annotations": []
+            }
+          ],
+          "annotations": [],
+          "calls": [
+            {
+              "caller_class": "com.example.war.DemoService",
+              "caller_method": "choose",
+              "target": "com.example.war.DemoService.helper",
+              "line": 6,
+              "resolved": false,
+              "dynamic": false,
+              "parameter_types": [
+                "java.lang.String"
+              ],
+              "parameter_evidence": "bytecode-descriptor",
+              "evidence": {
+                "file": "WEB-INF/classes/com/example/war/DemoService.class",
+                "line": 6,
+                "class_name": "com.example.war.DemoService",
+                "method": "choose"
+              }
+            },
+            {
+              "caller_class": "com.example.war.DemoService",
+              "caller_method": "choose",
+              "target": "java.lang.IllegalArgumentException.<init>",
+              "line": 8,
+              "resolved": false,
+              "dynamic": false,
+              "parameter_types": [
+                "java.lang.String"
+              ],
+              "parameter_evidence": "bytecode-descriptor",
+              "evidence": {
+                "file": "WEB-INF/classes/com/example/war/DemoService.class",
+                "line": 8,
+                "class_name": "com.example.war.DemoService",
+                "method": "choose"
+              }
+            }
+          ],
+          "branches": [
+            {
+              "id": "bytecode-1",
+              "class_name": "com.example.war.DemoService",
+              "method": "choose",
+              "kind": "if",
+              "line": 5,
+              "condition": "bytecode ifeq",
+              "risk": "medium",
+              "evidence": {
+                "file": "WEB-INF/classes/com/example/war/DemoService.class",
+                "line": 5,
+                "class_name": "com.example.war.DemoService",
+                "method": "choose"
+              }
+            }
+          ],
+          "exceptions": [],
+          "confidence": "bytecode",
+          "line": 5,
+          "end_line": 8,
+          "file": "WEB-INF/classes/com/example/war/DemoService.class"
+        },
+        {
+          "class_name": "com.example.war.DemoService",
+          "name": "helper",
+          "signature": "helper(Ljava/lang/String;)Ljava/lang/String;",
+          "descriptor": "(Ljava/lang/String;)Ljava/lang/String;",
+          "parameters": [
+            {
+              "name": "arg0",
+              "type": "java.lang.String",
+              "annotations": []
+            }
+          ],
+          "annotations": [],
+          "calls": [
+            {
+              "caller_class": "com.example.war.DemoService",
+              "caller_method": "helper",
+              "target": "java.lang.String.trim",
+              "line": 12,
+              "resolved": false,
+              "dynamic": false,
+              "parameter_types": [],
+              "parameter_evidence": "bytecode-descriptor",
+              "evidence": {
+                "file": "WEB-INF/classes/com/example/war/DemoService.class",
+                "line": 12,
+                "class_name": "com.example.war.DemoService",
+                "method": "helper"
+              }
+            }
+          ],
+          "branches": [],
+          "exceptions": [],
+          "confidence": "bytecode",
+          "line": 12,
+          "end_line": 12,
+          "file": "WEB-INF/classes/com/example/war/DemoService.class"
+        }
+      ],
+      "confidence": "bytecode"
+    }
+  ],
+  "endpoints": [],
+  "branches": [
+    {
+      "id": "bytecode-1",
+      "class_name": "com.example.war.DemoService",
+      "method": "choose",
+      "kind": "if",
+      "line": 5,
+      "condition": "bytecode ifeq",
+      "risk": "medium",
+      "evidence": {
+        "file": "WEB-INF/classes/com/example/war/DemoService.class",
+        "line": 5,
+        "class_name": "com.example.war.DemoService",
+        "method": "choose"
+      }
+    }
+  ],
+  "exceptions": [],
+  "calls": [
+    {
+      "caller_class": "com.example.war.DemoService",
+      "caller_method": "<init>",
+      "target": "java.lang.Object.<init>",
+      "line": 3,
+      "resolved": false,
+      "dynamic": false,
+      "parameter_types": [],
+      "parameter_evidence": "bytecode-descriptor",
+      "evidence": {
+        "file": "WEB-INF/classes/com/example/war/DemoService.class",
+        "line": 3,
+        "class_name": "com.example.war.DemoService",
+        "method": "<init>"
+      }
+    },
+    {
+      "caller_class": "com.example.war.DemoService",
+      "caller_method": "choose",
+      "target": "com.example.war.DemoService.helper",
+      "line": 6,
+      "resolved": false,
+      "dynamic": false,
+      "parameter_types": [
+        "java.lang.String"
+      ],
+      "parameter_evidence": "bytecode-descriptor",
+      "evidence": {
+        "file": "WEB-INF/classes/com/example/war/DemoService.class",
+        "line": 6,
+        "class_name": "com.example.war.DemoService",
+        "method": "choose"
+      }
+    },
+    {
+      "caller_class": "com.example.war.DemoService",
+      "caller_method": "choose",
+      "target": "java.lang.IllegalArgumentException.<init>",
+      "line": 8,
+      "resolved": false,
+      "dynamic": false,
+      "parameter_types": [
+        "java.lang.String"
+      ],
+      "parameter_evidence": "bytecode-descriptor",
+      "evidence": {
+        "file": "WEB-INF/classes/com/example/war/DemoService.class",
+        "line": 8,
+        "class_name": "com.example.war.DemoService",
+        "method": "choose"
+      }
+    },
+    {
+      "caller_class": "com.example.war.DemoService",
+      "caller_method": "helper",
+      "target": "java.lang.String.trim",
+      "line": 12,
+      "resolved": false,
+      "dynamic": false,
+      "parameter_types": [],
+      "parameter_evidence": "bytecode-descriptor",
+      "evidence": {
+        "file": "WEB-INF/classes/com/example/war/DemoService.class",
+        "line": 12,
+        "class_name": "com.example.war.DemoService",
+        "method": "helper"
+      }
+    }
+  ],
+  "uncertainties": [
+    {
+      "kind": "missing-dependency",
+      "message": "1 nested JAR(s) were inventoried but not introspected. Calls into those dependencies remain unresolved."
+    }
+  ],
+  "archive": {
+    "entries": 3,
+    "bytes": 988,
+    "class_files": 1,
+    "jars": 1,
+    "config_files": [
+      "WEB-INF/web.xml"
+    ],
+    "files": [
+      {
+        "path": "WEB-INF/classes/com/example/war/DemoService.class",
+        "bytes": 794,
+        "kind": "class"
+      },
+      {
+        "path": "WEB-INF/web.xml",
+        "bytes": 172,
+        "kind": "config"
+      },
+      {
+        "path": "WEB-INF/lib/empty-dependency.jar",
+        "bytes": 22,
+        "kind": "jar"
+      }
+    ]
+  },
+  "coverage": {
+    "measured": false,
+    "note": "WAR analysis is bytecode-static. No runtime coverage data exists, and dynamic or dependency-internal calls may be missing."
+  }
+}

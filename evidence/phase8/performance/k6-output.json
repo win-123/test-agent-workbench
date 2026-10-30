@@ -1,0 +1,46 @@
+{
+  "engine": {
+    "name": "k6",
+    "version": "k6 v1.8.2 (commit/682f083071, go1.26.9, darwin/arm64)",
+    "version_available": true
+  },
+  "run_id": "engine_20261028061517_cce73d",
+  "started_at": "2026-10-28T06:15:17.528Z",
+  "finished_at": "2026-10-28T06:15:17.550Z",
+  "configuration": {
+    "concurrency": 1,
+    "duration": "",
+    "iterations": 1
+  },
+  "metrics": {
+    "total": 3,
+    "passed": 0,
+    "failed": 3,
+    "error_rate": 1,
+    "avg_response_ms": 0,
+    "p90_response_ms": 0,
+    "p95_response_ms": 0,
+    "p99_response_ms": null,
+    "throughput_per_second": 1466.992665036675,
+    "throughput_basis": "k6 http_reqs.rate"
+  },
+  "evidence": {
+    "stdout_path": "/Users/ztl/Downloads/AIProject/test-agent/output/engine_20261028061517_cce73d.k6.stdout.log",
+    "stderr_path": "/Users/ztl/Downloads/AIProject/test-agent/output/engine_20261028061517_cce73d.k6.stderr.log",
+    "raw_result_path": "/Users/ztl/Downloads/AIProject/test-agent/output/engine_20261028061517_cce73d.k6.json",
+    "exit_code": 0,
+    "signal": null,
+    "timed_out": false,
+    "status": "passed"
+  },
+  "sensitive_redacted": true,
+  "diagnostics": [
+    {
+      "category": "test_result",
+      "message": "engine reported 3 failed requests out of 3"
+    }
+  ],
+  "limitations": [
+    "k6 summary did not provide p99."
+  ]
+}

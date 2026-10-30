@@ -1,0 +1,1278 @@
+{
+  "schema_version": "test-agent.java-analysis/v1",
+  "analysis_id": "source_20261028061432_fe2f28",
+  "mode": "source",
+  "input": "java-project",
+  "generated_at": "2026-10-28T06:14:32.357Z",
+  "structure": {
+    "root": "java-project",
+    "source_roots": [
+      "src/main/java",
+      "src"
+    ],
+    "source_files": 4,
+    "packages": [
+      "com.example.orders"
+    ],
+    "build_files": [
+      "pom.xml"
+    ],
+    "frameworks": [
+      "Spring"
+    ]
+  },
+  "classes": [
+    {
+      "name": "com.example.orders.LegacyRouter",
+      "package": "com.example.orders",
+      "kind": "class",
+      "file": "src/main/java/com/example/orders/LegacyRouter.java",
+      "line": 3,
+      "annotations": [],
+      "interfaces": [],
+      "methods": [
+        {
+          "class_name": "com.example.orders.LegacyRouter",
+          "name": "route",
+          "signature": "route(String className)",
+          "file": "src/main/java/com/example/orders/LegacyRouter.java",
+          "line": 4,
+          "end_line": 7,
+          "parameters": [
+            {
+              "name": "className",
+              "type": "String",
+              "annotations": []
+            }
+          ],
+          "annotations": [],
+          "calls": [
+            {
+              "caller_class": "com.example.orders.LegacyRouter",
+              "caller_method": "route",
+              "target": "Class.forName",
+              "line": 5,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [
+                "className"
+              ],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/LegacyRouter.java",
+                "line": 5,
+                "class_name": "com.example.orders.LegacyRouter",
+                "method": "route"
+              }
+            },
+            {
+              "caller_class": "com.example.orders.LegacyRouter",
+              "caller_method": "route",
+              "target": "type.getMethod",
+              "line": 6,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/LegacyRouter.java",
+                "line": 6,
+                "class_name": "com.example.orders.LegacyRouter",
+                "method": "route"
+              }
+            },
+            {
+              "caller_class": "com.example.orders.LegacyRouter",
+              "caller_method": "route",
+              "target": "invoke",
+              "line": 6,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [
+                "type.getDeclaredConstructor().newInstance()"
+              ],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/LegacyRouter.java",
+                "line": 6,
+                "class_name": "com.example.orders.LegacyRouter",
+                "method": "route"
+              }
+            },
+            {
+              "caller_class": "com.example.orders.LegacyRouter",
+              "caller_method": "route",
+              "target": "type.getDeclaredConstructor",
+              "line": 6,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/LegacyRouter.java",
+                "line": 6,
+                "class_name": "com.example.orders.LegacyRouter",
+                "method": "route"
+              }
+            },
+            {
+              "caller_class": "com.example.orders.LegacyRouter",
+              "caller_method": "route",
+              "target": "newInstance",
+              "line": 6,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/LegacyRouter.java",
+                "line": 6,
+                "class_name": "com.example.orders.LegacyRouter",
+                "method": "route"
+              }
+            }
+          ],
+          "branches": [],
+          "exceptions": [],
+          "confidence": "static"
+        }
+      ],
+      "confidence": "static"
+    },
+    {
+      "name": "com.example.orders.OrderController",
+      "package": "com.example.orders",
+      "kind": "class",
+      "file": "src/main/java/com/example/orders/OrderController.java",
+      "line": 13,
+      "annotations": [
+        "@RestController",
+        "@RequestMapping"
+      ],
+      "interfaces": [],
+      "methods": [
+        {
+          "class_name": "com.example.orders.OrderController",
+          "name": "OrderController",
+          "signature": "OrderController(OrderService service)",
+          "file": "src/main/java/com/example/orders/OrderController.java",
+          "line": 16,
+          "end_line": 18,
+          "parameters": [
+            {
+              "name": "service",
+              "type": "OrderService",
+              "annotations": []
+            }
+          ],
+          "annotations": [],
+          "calls": [],
+          "branches": [],
+          "exceptions": [],
+          "confidence": "static"
+        },
+        {
+          "class_name": "com.example.orders.OrderController",
+          "name": "findOrder",
+          "signature": "findOrder(@PathVariable(    ) String id)",
+          "file": "src/main/java/com/example/orders/OrderController.java",
+          "line": 21,
+          "end_line": 26,
+          "parameters": [
+            {
+              "name": "id",
+              "type": "String",
+              "annotations": [
+                "PathVariable"
+              ]
+            }
+          ],
+          "annotations": [
+            "@GetMapping(\"/{id}\")",
+            "@PathVariable(\"id\")"
+          ],
+          "calls": [
+            {
+              "caller_class": "com.example.orders.OrderController",
+              "caller_method": "findOrder",
+              "target": "id.isBlank",
+              "line": 22,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 22,
+                "class_name": "com.example.orders.OrderController",
+                "method": "findOrder"
+              }
+            },
+            {
+              "caller_class": "com.example.orders.OrderController",
+              "caller_method": "findOrder",
+              "target": "IllegalArgumentException",
+              "line": 23,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 23,
+                "class_name": "com.example.orders.OrderController",
+                "method": "findOrder"
+              }
+            },
+            {
+              "caller_class": "com.example.orders.OrderController",
+              "caller_method": "findOrder",
+              "target": "ResponseEntity.ok",
+              "line": 25,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [
+                "service.find(id)"
+              ],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 25,
+                "class_name": "com.example.orders.OrderController",
+                "method": "findOrder"
+              }
+            },
+            {
+              "caller_class": "com.example.orders.OrderController",
+              "caller_method": "findOrder",
+              "target": "service.find",
+              "line": 25,
+              "resolved": true,
+              "dynamic": false,
+              "arguments": [
+                "id"
+              ],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 25,
+                "class_name": "com.example.orders.OrderController",
+                "method": "findOrder"
+              }
+            }
+          ],
+          "branches": [
+            {
+              "id": "branch-1",
+              "class_name": "com.example.orders.OrderController",
+              "method": "findOrder",
+              "kind": "if",
+              "line": 22,
+              "condition": "id == null || id.isBlank(",
+              "risk": "high",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 22,
+                "class_name": "com.example.orders.OrderController",
+                "method": "findOrder"
+              }
+            }
+          ],
+          "exceptions": [
+            {
+              "class_name": "com.example.orders.OrderController",
+              "method": "findOrder",
+              "kind": "throw",
+              "line": 23,
+              "type": "IllegalArgumentException",
+              "message": "                ",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 23,
+                "class_name": "com.example.orders.OrderController",
+                "method": "findOrder"
+              }
+            }
+          ],
+          "confidence": "static"
+        },
+        {
+          "class_name": "com.example.orders.OrderController",
+          "name": "createOrder",
+          "signature": "createOrder(@RequestBody OrderRequest request)",
+          "file": "src/main/java/com/example/orders/OrderController.java",
+          "line": 28,
+          "end_line": 38,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "OrderRequest",
+              "annotations": [
+                "RequestBody"
+              ]
+            }
+          ],
+          "annotations": [
+            "@PostMapping"
+          ],
+          "calls": [
+            {
+              "caller_class": "com.example.orders.OrderController",
+              "caller_method": "createOrder",
+              "target": "request.priority",
+              "line": 31,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 31,
+                "class_name": "com.example.orders.OrderController",
+                "method": "createOrder"
+              }
+            },
+            {
+              "caller_class": "com.example.orders.OrderController",
+              "caller_method": "createOrder",
+              "target": "equals",
+              "line": 31,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 31,
+                "class_name": "com.example.orders.OrderController",
+                "method": "createOrder"
+              }
+            },
+            {
+              "caller_class": "com.example.orders.OrderController",
+              "caller_method": "createOrder",
+              "target": "ResponseEntity.status",
+              "line": 32,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [
+                "202"
+              ],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 32,
+                "class_name": "com.example.orders.OrderController",
+                "method": "createOrder"
+              }
+            },
+            {
+              "caller_class": "com.example.orders.OrderController",
+              "caller_method": "createOrder",
+              "target": "body",
+              "line": 32,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [
+                "service.submit(request)"
+              ],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 32,
+                "class_name": "com.example.orders.OrderController",
+                "method": "createOrder"
+              }
+            },
+            {
+              "caller_class": "com.example.orders.OrderController",
+              "caller_method": "createOrder",
+              "target": "service.submit",
+              "line": 32,
+              "resolved": true,
+              "dynamic": false,
+              "arguments": [
+                "request"
+              ],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 32,
+                "class_name": "com.example.orders.OrderController",
+                "method": "createOrder"
+              }
+            },
+            {
+              "caller_class": "com.example.orders.OrderController",
+              "caller_method": "createOrder",
+              "target": "ResponseEntity.ok",
+              "line": 34,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [
+                "service.submit(request)"
+              ],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 34,
+                "class_name": "com.example.orders.OrderController",
+                "method": "createOrder"
+              }
+            },
+            {
+              "caller_class": "com.example.orders.OrderController",
+              "caller_method": "createOrder",
+              "target": "service.submit",
+              "line": 34,
+              "resolved": true,
+              "dynamic": false,
+              "arguments": [
+                "request"
+              ],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 34,
+                "class_name": "com.example.orders.OrderController",
+                "method": "createOrder"
+              }
+            },
+            {
+              "caller_class": "com.example.orders.OrderController",
+              "caller_method": "createOrder",
+              "target": "ResponseEntity.internalServerError",
+              "line": 36,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 36,
+                "class_name": "com.example.orders.OrderController",
+                "method": "createOrder"
+              }
+            },
+            {
+              "caller_class": "com.example.orders.OrderController",
+              "caller_method": "createOrder",
+              "target": "body",
+              "line": 36,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [
+                "error.getMessage()"
+              ],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 36,
+                "class_name": "com.example.orders.OrderController",
+                "method": "createOrder"
+              }
+            },
+            {
+              "caller_class": "com.example.orders.OrderController",
+              "caller_method": "createOrder",
+              "target": "error.getMessage",
+              "line": 36,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 36,
+                "class_name": "com.example.orders.OrderController",
+                "method": "createOrder"
+              }
+            }
+          ],
+          "branches": [
+            {
+              "id": "branch-1",
+              "class_name": "com.example.orders.OrderController",
+              "method": "createOrder",
+              "kind": "if",
+              "line": 31,
+              "condition": "request.priority(",
+              "risk": "high",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 31,
+                "class_name": "com.example.orders.OrderController",
+                "method": "createOrder"
+              }
+            }
+          ],
+          "exceptions": [
+            {
+              "class_name": "com.example.orders.OrderController",
+              "method": "createOrder",
+              "kind": "catch",
+              "line": 35,
+              "type": "RuntimeException",
+              "message": "catch block",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderController.java",
+                "line": 35,
+                "class_name": "com.example.orders.OrderController",
+                "method": "createOrder"
+              }
+            }
+          ],
+          "confidence": "static"
+        }
+      ],
+      "confidence": "static"
+    },
+    {
+      "name": "com.example.orders.OrderRequest",
+      "package": "com.example.orders",
+      "kind": "record",
+      "file": "src/main/java/com/example/orders/OrderRequest.java",
+      "line": 3,
+      "annotations": [],
+      "interfaces": [],
+      "methods": [],
+      "confidence": "static"
+    },
+    {
+      "name": "com.example.orders.OrderService",
+      "package": "com.example.orders",
+      "kind": "class",
+      "file": "src/main/java/com/example/orders/OrderService.java",
+      "line": 3,
+      "annotations": [],
+      "interfaces": [],
+      "methods": [
+        {
+          "class_name": "com.example.orders.OrderService",
+          "name": "find",
+          "signature": "find(String id)",
+          "file": "src/main/java/com/example/orders/OrderService.java",
+          "line": 4,
+          "end_line": 9,
+          "parameters": [
+            {
+              "name": "id",
+              "type": "String",
+              "annotations": []
+            }
+          ],
+          "annotations": [],
+          "calls": [
+            {
+              "caller_class": "com.example.orders.OrderService",
+              "caller_method": "find",
+              "target": "id.startsWith",
+              "line": 5,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderService.java",
+                "line": 5,
+                "class_name": "com.example.orders.OrderService",
+                "method": "find"
+              }
+            },
+            {
+              "caller_class": "com.example.orders.OrderService",
+              "caller_method": "find",
+              "target": "IllegalStateException",
+              "line": 6,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderService.java",
+                "line": 6,
+                "class_name": "com.example.orders.OrderService",
+                "method": "find"
+              }
+            }
+          ],
+          "branches": [
+            {
+              "id": "branch-1",
+              "class_name": "com.example.orders.OrderService",
+              "method": "find",
+              "kind": "if",
+              "line": 5,
+              "condition": "id.startsWith(",
+              "risk": "high",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderService.java",
+                "line": 5,
+                "class_name": "com.example.orders.OrderService",
+                "method": "find"
+              }
+            }
+          ],
+          "exceptions": [
+            {
+              "class_name": "com.example.orders.OrderService",
+              "method": "find",
+              "kind": "throw",
+              "line": 6,
+              "type": "IllegalStateException",
+              "message": "                 ",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderService.java",
+                "line": 6,
+                "class_name": "com.example.orders.OrderService",
+                "method": "find"
+              }
+            }
+          ],
+          "confidence": "static"
+        },
+        {
+          "class_name": "com.example.orders.OrderService",
+          "name": "submit",
+          "signature": "submit(OrderRequest request)",
+          "file": "src/main/java/com/example/orders/OrderService.java",
+          "line": 11,
+          "end_line": 18,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "OrderRequest",
+              "annotations": []
+            }
+          ],
+          "annotations": [],
+          "calls": [
+            {
+              "caller_class": "com.example.orders.OrderService",
+              "caller_method": "submit",
+              "target": "request.priority",
+              "line": 12,
+              "resolved": false,
+              "dynamic": false,
+              "arguments": [],
+              "parameter_evidence": "source-text",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderService.java",
+                "line": 12,
+                "class_name": "com.example.orders.OrderService",
+                "method": "submit"
+              }
+            }
+          ],
+          "branches": [
+            {
+              "id": "branch-1",
+              "class_name": "com.example.orders.OrderService",
+              "method": "submit",
+              "kind": "switch",
+              "line": 12,
+              "condition": "request.priority(",
+              "risk": "high",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderService.java",
+                "line": 12,
+                "class_name": "com.example.orders.OrderService",
+                "method": "submit"
+              }
+            },
+            {
+              "id": "branch-2",
+              "class_name": "com.example.orders.OrderService",
+              "method": "submit",
+              "kind": "case",
+              "line": 13,
+              "condition": "",
+              "risk": "high",
+              "evidence": {
+                "file": "src/main/java/com/example/orders/OrderService.java",
+                "line": 13,
+                "class_name": "com.example.orders.OrderService",
+                "method": "submit"
+              }
+            }
+          ],
+          "exceptions": [],
+          "confidence": "static"
+        }
+      ],
+      "confidence": "static"
+    }
+  ],
+  "endpoints": [
+    {
+      "http_method": "GET",
+      "path": "/api/orders/{id}",
+      "class_name": "com.example.orders.OrderController",
+      "method": "findOrder",
+      "parameters": [
+        {
+          "name": "id",
+          "type": "String",
+          "annotations": [
+            "PathVariable"
+          ]
+        }
+      ],
+      "request_body": false,
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 21,
+        "class_name": "com.example.orders.OrderController",
+        "method": "findOrder"
+      }
+    },
+    {
+      "http_method": "POST",
+      "path": "/api/orders",
+      "class_name": "com.example.orders.OrderController",
+      "method": "createOrder",
+      "parameters": [
+        {
+          "name": "request",
+          "type": "OrderRequest",
+          "annotations": [
+            "RequestBody"
+          ]
+        }
+      ],
+      "request_body": true,
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 28,
+        "class_name": "com.example.orders.OrderController",
+        "method": "createOrder"
+      }
+    }
+  ],
+  "branches": [
+    {
+      "id": "branch-1",
+      "class_name": "com.example.orders.OrderController",
+      "method": "findOrder",
+      "kind": "if",
+      "line": 22,
+      "condition": "id == null || id.isBlank(",
+      "risk": "high",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 22,
+        "class_name": "com.example.orders.OrderController",
+        "method": "findOrder"
+      }
+    },
+    {
+      "id": "branch-1",
+      "class_name": "com.example.orders.OrderController",
+      "method": "createOrder",
+      "kind": "if",
+      "line": 31,
+      "condition": "request.priority(",
+      "risk": "high",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 31,
+        "class_name": "com.example.orders.OrderController",
+        "method": "createOrder"
+      }
+    },
+    {
+      "id": "branch-1",
+      "class_name": "com.example.orders.OrderService",
+      "method": "find",
+      "kind": "if",
+      "line": 5,
+      "condition": "id.startsWith(",
+      "risk": "high",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderService.java",
+        "line": 5,
+        "class_name": "com.example.orders.OrderService",
+        "method": "find"
+      }
+    },
+    {
+      "id": "branch-1",
+      "class_name": "com.example.orders.OrderService",
+      "method": "submit",
+      "kind": "switch",
+      "line": 12,
+      "condition": "request.priority(",
+      "risk": "high",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderService.java",
+        "line": 12,
+        "class_name": "com.example.orders.OrderService",
+        "method": "submit"
+      }
+    },
+    {
+      "id": "branch-2",
+      "class_name": "com.example.orders.OrderService",
+      "method": "submit",
+      "kind": "case",
+      "line": 13,
+      "condition": "",
+      "risk": "high",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderService.java",
+        "line": 13,
+        "class_name": "com.example.orders.OrderService",
+        "method": "submit"
+      }
+    }
+  ],
+  "exceptions": [
+    {
+      "class_name": "com.example.orders.OrderController",
+      "method": "findOrder",
+      "kind": "throw",
+      "line": 23,
+      "type": "IllegalArgumentException",
+      "message": "                ",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 23,
+        "class_name": "com.example.orders.OrderController",
+        "method": "findOrder"
+      }
+    },
+    {
+      "class_name": "com.example.orders.OrderController",
+      "method": "createOrder",
+      "kind": "catch",
+      "line": 35,
+      "type": "RuntimeException",
+      "message": "catch block",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 35,
+        "class_name": "com.example.orders.OrderController",
+        "method": "createOrder"
+      }
+    },
+    {
+      "class_name": "com.example.orders.OrderService",
+      "method": "find",
+      "kind": "throw",
+      "line": 6,
+      "type": "IllegalStateException",
+      "message": "                 ",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderService.java",
+        "line": 6,
+        "class_name": "com.example.orders.OrderService",
+        "method": "find"
+      }
+    }
+  ],
+  "calls": [
+    {
+      "caller_class": "com.example.orders.LegacyRouter",
+      "caller_method": "route",
+      "target": "Class.forName",
+      "line": 5,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [
+        "className"
+      ],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/LegacyRouter.java",
+        "line": 5,
+        "class_name": "com.example.orders.LegacyRouter",
+        "method": "route"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.LegacyRouter",
+      "caller_method": "route",
+      "target": "type.getMethod",
+      "line": 6,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/LegacyRouter.java",
+        "line": 6,
+        "class_name": "com.example.orders.LegacyRouter",
+        "method": "route"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.LegacyRouter",
+      "caller_method": "route",
+      "target": "invoke",
+      "line": 6,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [
+        "type.getDeclaredConstructor().newInstance()"
+      ],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/LegacyRouter.java",
+        "line": 6,
+        "class_name": "com.example.orders.LegacyRouter",
+        "method": "route"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.LegacyRouter",
+      "caller_method": "route",
+      "target": "type.getDeclaredConstructor",
+      "line": 6,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/LegacyRouter.java",
+        "line": 6,
+        "class_name": "com.example.orders.LegacyRouter",
+        "method": "route"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.LegacyRouter",
+      "caller_method": "route",
+      "target": "newInstance",
+      "line": 6,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/LegacyRouter.java",
+        "line": 6,
+        "class_name": "com.example.orders.LegacyRouter",
+        "method": "route"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.OrderController",
+      "caller_method": "findOrder",
+      "target": "id.isBlank",
+      "line": 22,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 22,
+        "class_name": "com.example.orders.OrderController",
+        "method": "findOrder"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.OrderController",
+      "caller_method": "findOrder",
+      "target": "IllegalArgumentException",
+      "line": 23,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 23,
+        "class_name": "com.example.orders.OrderController",
+        "method": "findOrder"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.OrderController",
+      "caller_method": "findOrder",
+      "target": "ResponseEntity.ok",
+      "line": 25,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [
+        "service.find(id)"
+      ],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 25,
+        "class_name": "com.example.orders.OrderController",
+        "method": "findOrder"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.OrderController",
+      "caller_method": "findOrder",
+      "target": "service.find",
+      "line": 25,
+      "resolved": true,
+      "dynamic": false,
+      "arguments": [
+        "id"
+      ],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 25,
+        "class_name": "com.example.orders.OrderController",
+        "method": "findOrder"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.OrderController",
+      "caller_method": "createOrder",
+      "target": "request.priority",
+      "line": 31,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 31,
+        "class_name": "com.example.orders.OrderController",
+        "method": "createOrder"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.OrderController",
+      "caller_method": "createOrder",
+      "target": "equals",
+      "line": 31,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 31,
+        "class_name": "com.example.orders.OrderController",
+        "method": "createOrder"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.OrderController",
+      "caller_method": "createOrder",
+      "target": "ResponseEntity.status",
+      "line": 32,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [
+        "202"
+      ],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 32,
+        "class_name": "com.example.orders.OrderController",
+        "method": "createOrder"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.OrderController",
+      "caller_method": "createOrder",
+      "target": "body",
+      "line": 32,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [
+        "service.submit(request)"
+      ],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 32,
+        "class_name": "com.example.orders.OrderController",
+        "method": "createOrder"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.OrderController",
+      "caller_method": "createOrder",
+      "target": "service.submit",
+      "line": 32,
+      "resolved": true,
+      "dynamic": false,
+      "arguments": [
+        "request"
+      ],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 32,
+        "class_name": "com.example.orders.OrderController",
+        "method": "createOrder"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.OrderController",
+      "caller_method": "createOrder",
+      "target": "ResponseEntity.ok",
+      "line": 34,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [
+        "service.submit(request)"
+      ],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 34,
+        "class_name": "com.example.orders.OrderController",
+        "method": "createOrder"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.OrderController",
+      "caller_method": "createOrder",
+      "target": "service.submit",
+      "line": 34,
+      "resolved": true,
+      "dynamic": false,
+      "arguments": [
+        "request"
+      ],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 34,
+        "class_name": "com.example.orders.OrderController",
+        "method": "createOrder"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.OrderController",
+      "caller_method": "createOrder",
+      "target": "ResponseEntity.internalServerError",
+      "line": 36,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 36,
+        "class_name": "com.example.orders.OrderController",
+        "method": "createOrder"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.OrderController",
+      "caller_method": "createOrder",
+      "target": "body",
+      "line": 36,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [
+        "error.getMessage()"
+      ],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 36,
+        "class_name": "com.example.orders.OrderController",
+        "method": "createOrder"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.OrderController",
+      "caller_method": "createOrder",
+      "target": "error.getMessage",
+      "line": 36,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "line": 36,
+        "class_name": "com.example.orders.OrderController",
+        "method": "createOrder"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.OrderService",
+      "caller_method": "find",
+      "target": "id.startsWith",
+      "line": 5,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderService.java",
+        "line": 5,
+        "class_name": "com.example.orders.OrderService",
+        "method": "find"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.OrderService",
+      "caller_method": "find",
+      "target": "IllegalStateException",
+      "line": 6,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderService.java",
+        "line": 6,
+        "class_name": "com.example.orders.OrderService",
+        "method": "find"
+      }
+    },
+    {
+      "caller_class": "com.example.orders.OrderService",
+      "caller_method": "submit",
+      "target": "request.priority",
+      "line": 12,
+      "resolved": false,
+      "dynamic": false,
+      "arguments": [],
+      "parameter_evidence": "source-text",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderService.java",
+        "line": 12,
+        "class_name": "com.example.orders.OrderService",
+        "method": "submit"
+      }
+    }
+  ],
+  "uncertainties": [
+    {
+      "kind": "reflection",
+      "message": "Reflection or dynamic proxy APIs were found; static call edges may be incomplete.",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/LegacyRouter.java",
+        "class_name": "com.example.orders.LegacyRouter"
+      }
+    },
+    {
+      "kind": "unsupported-syntax",
+      "message": "Controller return values may alter runtime routing; static endpoint paths are declaration evidence only.",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderController.java",
+        "class_name": "com.example.orders.OrderController"
+      }
+    },
+    {
+      "kind": "unsupported-syntax",
+      "message": "No method signatures were parsed.",
+      "evidence": {
+        "file": "src/main/java/com/example/orders/OrderRequest.java",
+        "line": 3,
+        "class_name": "com.example.orders.OrderRequest"
+      }
+    }
+  ],
+  "coverage": {
+    "measured": false,
+    "note": "No runtime coverage data was supplied. Branch lists are static candidates, not measured coverage."
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "run_id": "ui_20261028005556_410565",
+  "case_id": "ui-order-downstream-failure",
+  "case_version": 1,
+  "name": "Order form downstream failure",
+  "status": "passed",
+  "target_url": "http://127.0.0.1:8090/",
+  "browser": "156.0.8078.48",
+  "started_at": "2026-10-28T00:55:56.188Z",
+  "finished_at": "2026-10-28T00:55:56.687Z",
+  "duration_ms": 499,
+  "steps_total": 8,
+  "steps_passed": 8,
+  "steps_failed": 0,
+  "steps": [
+    {
+      "id": "open",
+      "action": "navigate",
+      "status": "passed",
+      "started_at": "2026-10-28T00:55:56.480Z",
+      "finished_at": "2026-10-28T00:55:56.502Z",
+      "duration_ms": 22,
+      "actual": "200 http://127.0.0.1:8090/"
+    },
+    {
+      "id": "username",
+      "action": "fill",
+      "status": "passed",
+      "started_at": "2026-10-28T00:55:56.502Z",
+      "finished_at": "2026-10-28T00:55:56.527Z",
+      "duration_ms": 24,
+      "actual": "[input value redacted]"
+    },
+    {
+      "id": "password",
+      "action": "fill",
+      "status": "passed",
+      "started_at": "2026-10-28T00:55:56.527Z",
+      "finished_at": "2026-10-28T00:55:56.544Z",
+      "duration_ms": 18,
+      "actual": "[input value redacted]"
+    },
+    {
+      "id": "login",
+      "action": "click",
+      "status": "passed",
+      "started_at": "2026-10-28T00:55:56.544Z",
+      "finished_at": "2026-10-28T00:55:56.576Z",
+      "duration_ms": 32,
+      "actual": "0 matching element(s)"
+    },
+    {
+      "id": "customer",
+      "action": "fill",
+      "status": "passed",
+      "started_at": "2026-10-28T00:55:56.576Z",
+      "finished_at": "2026-10-28T00:55:56.578Z",
+      "duration_ms": 1,
+      "actual": "[input value redacted]"
+    },
+    {
+      "id": "simulate-failure",
+      "action": "click",
+      "status": "passed",
+      "started_at": "2026-10-28T00:55:56.578Z",
+      "finished_at": "2026-10-28T00:55:56.608Z",
+      "duration_ms": 30,
+      "actual": "1 matching element(s)"
+    },
+    {
+      "id": "submit",
+      "action": "click",
+      "status": "passed",
+      "started_at": "2026-10-28T00:55:56.608Z",
+      "finished_at": "2026-10-28T00:55:56.642Z",
+      "duration_ms": 34,
+      "actual": "1 matching element(s)"
+    },
+    {
+      "id": "failure-message",
+      "action": "assert",
+      "status": "passed",
+      "started_at": "2026-10-28T00:55:56.642Z",
+      "finished_at": "2026-10-28T00:55:56.643Z",
+      "duration_ms": 1,
+      "expected": "Order rejected: downstream inventory service is unavailable.",
+      "actual": "Order rejected: downstream inventory service is unavailable."
+    }
+  ],
+  "console": [],
+  "page_errors": [],
+  "screenshots": [],
+  "sensitive_redacted": true
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": "test-agent.desktop-project/v1",
+  "project_id": "64976a19-966e-4c78-8629-90b849c5feb5",
+  "name": "Phase 7 E2E",
+  "created_at": "2026-10-28T03:13:25.727Z",
+  "updated_at": "2026-10-28T03:13:25.730Z",
+  "target": {
+    "baseUrl": "http://127.0.0.1:57446",
+    "allowedOrigins": [
+      "http://127.0.0.1:57446"
+    ],
+    "allowedPaths": []
+  },
+  "environment": {
+    "headers": {}
+  },
+  "api": {
+    "timeoutMs": 3000,
+    "concurrency": 1,
+    "assertions": []
+  },
+  "performance": {
+    "engine": "k6",
+    "vus": 1,
+    "duration": "",
+    "iterations": 1,
+    "timeoutMs": 30000,
+    "enginePaths": {
+      "k6": "/Users/ztl/Downloads/k6-v1.8.2-macos-arm64/k6"
+    }
+  },
+  "correlations": [],
+  "authorization": {
+    "confirmed": true,
+    "scope": "Phase 7 local fixture only"
+  },
+  "har_file": "har/20261028031325-orders.har"
+}

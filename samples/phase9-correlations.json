@@ -1,0 +1,21 @@
+[
+  {
+    "sourceIndex": 0,
+    "jsonPath": "$.accessToken",
+    "variableName": "accessToken",
+    "targetIndexes": [],
+    "targetHeaders": [
+      {
+        "index": 1,
+        "name": "Authorization",
+        "value": "Bearer ${accessToken}"
+      }
+    ]
+  },
+  {
+    "sourceIndex": 1,
+    "jsonPath": "$.id",
+    "variableName": "orderId",
+    "targetIndexes": [2]
+  }
+]
